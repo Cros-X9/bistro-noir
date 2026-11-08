@@ -29,3 +29,23 @@ p {
     cursor: pointer;
     font-size: 16px;
 }
+
+header {
+    padding: 20px;
+    border-bottom: 1px solid #333;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #d6b47a;
+}
