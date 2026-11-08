@@ -49,3 +49,39 @@ nav a {
 nav a:hover {
     color: #d6b47a;
 }
+.button {
+    display: inline-block;
+    background-color: #d6b47a;
+    color: #181818;
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #edcf9a;
+}
+
+.menu {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 35px;
+    color: #d6b47a;
+}
+
+.menu-item {
+    background-color: #242424;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.menu-item h3 {
+    color: #d6b47a;
+}
