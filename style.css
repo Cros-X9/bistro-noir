@@ -1,10 +1,31 @@
-.button {
-    background-color: #4CAF50;
-    border: none;
+
+body {
+    background-color: #181818;
     color: white;
-    padding: 15px 32px;
+    font-family: Arial, sans-serif;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    padding-top: 100px;
+}
+
+h1 {
+    font-size: 50px;
+    color: #d6b47a;
+}
+
+h2 {
+    color: #cccccc;
+}
+
+p {
+    color: #aaaaaa;
+}
+
+.button {
+    background-color: #d6b47a;
+    border: none;
+    color: #181818;
+    padding: 15px 32px;
+    border-radius: 6px;
+    cursor: pointer;
     font-size: 16px;
 }
