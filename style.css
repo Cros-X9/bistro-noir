@@ -1,15 +1,19 @@
+html {
+    scroll-behavior: smooth;
+}
 
 body {
+    margin: 0;
     background-color: #181818;
     color: white;
     font-family: Arial, sans-serif;
     text-align: center;
-    padding-top: 100px;
 }
 
 h1 {
     font-size: 50px;
     color: #d6b47a;
+    margin: 10px 0;
 }
 
 h2 {
@@ -20,17 +24,12 @@ p {
     color: #aaaaaa;
 }
 
-.button {
-    background-color: #d6b47a;
-    border: none;
-    color: #181818;
-    padding: 15px 32px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
+/* Header / navigation */
 header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #181818;
     padding: 20px;
     border-bottom: 1px solid #333;
 }
@@ -49,6 +48,25 @@ nav a {
 nav a:hover {
     color: #d6b47a;
 }
+
+/* Hero */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Small labels above headings */
+.tag {
+    letter-spacing: 3px;
+    font-size: 13px;
+    color: #d6b47a;
+}
+
+/* Button */
 .button {
     display: inline-block;
     background-color: #d6b47a;
@@ -64,16 +82,24 @@ nav a:hover {
     background-color: #edcf9a;
 }
 
-.menu {
+/* Sections */
+.section {
     padding: 70px 20px;
     text-align: center;
 }
 
-.menu h2 {
+.section h2 {
     font-size: 35px;
     color: #d6b47a;
 }
 
+.text {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Menu */
 .menu-item {
     background-color: #242424;
     max-width: 500px;
@@ -84,4 +110,50 @@ nav a:hover {
 
 .menu-item h3 {
     color: #d6b47a;
+}
+
+.price {
+    display: block;
+    margin-top: 6px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Map */
+.map {
+    max-width: 700px;
+    margin: 30px auto 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    border-top: 1px solid #333;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    nav {
+        gap: 16px;
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 50px 16px;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
 }
