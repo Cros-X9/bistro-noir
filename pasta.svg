@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Italian pasta illustration">
+  <defs>
+    <radialGradient id="bg" cx="0.5" cy="0.4" r="0.8">
+      <stop offset="0" stop-color="#3a2f20"/>
+      <stop offset="1" stop-color="#15110c"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <!-- plate -->
+  <ellipse cx="200" cy="248" rx="155" ry="30" fill="#000" opacity="0.35"/>
+  <ellipse cx="200" cy="215" rx="155" ry="52" fill="#f4f1ea"/>
+  <ellipse cx="200" cy="210" rx="118" ry="38" fill="#e8e3d8"/>
+  <!-- pasta nest -->
+  <g fill="none" stroke="#e9c46a" stroke-width="6" stroke-linecap="round">
+    <path d="M105 205 Q140 150 200 170 T295 195"/>
+    <path d="M115 215 Q160 160 215 180 T290 210"/>
+    <path d="M125 195 Q165 140 220 165 T285 190"/>
+    <path d="M135 220 Q175 170 230 190 T275 215"/>
+    <path d="M150 185 Q190 135 235 160 T270 180"/>
+    <path d="M160 205 Q195 160 240 178"/>
+  </g>
+  <g fill="none" stroke="#f3d98b" stroke-width="3" stroke-linecap="round" opacity="0.7">
+    <path d="M120 200 Q160 150 215 172"/>
+    <path d="M140 212 Q180 168 235 185"/>
+  </g>
+  <!-- sauce -->
+  <ellipse cx="200" cy="160" rx="56" ry="22" fill="#b83227"/>
+  <ellipse cx="190" cy="155" rx="30" ry="10" fill="#d64a3a"/>
+  <circle cx="225" cy="162" r="6" fill="#e25d4b"/>
+  <circle cx="175" cy="165" r="5" fill="#e25d4b"/>
+  <!-- basil -->
+  <path d="M195 150 Q175 125 205 118 Q225 135 195 150 Z" fill="#3f8f4a"/>
+  <path d="M205 148 Q215 122 240 128 Q238 148 205 148 Z" fill="#4fa85a"/>
+  <path d="M200 148 L205 124" stroke="#2f6e38" stroke-width="2" fill="none"/>
+  <!-- parmesan -->
+  <g fill="#fff6d6">
+    <circle cx="170" cy="150" r="2.5"/><circle cx="215" cy="147" r="2.5"/>
+    <circle cx="232" cy="155" r="2"/><circle cx="185" cy="143" r="2"/>
+    <circle cx="205" cy="168" r="2"/><circle cx="160" cy="160" r="2"/>
+  </g>
+</svg>
