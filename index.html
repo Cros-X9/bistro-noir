@@ -1,56 +1,81 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bistro Noir - modern restaurant in Wrocław. Fresh pasta, grilled salmon and desserts.">
     <title>Bistro Noir</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#menu">Menu</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
     <section class="hero">
+        <p class="tag">WELCOME TO BISTRO NOIR</p>
+        <h1>Bistro Noir</h1>
+        <h2>Modern Restaurant in Wrocław</h2>
+        <p>Discover our food and enjoy the atmosphere.</p>
+        <a href="#menu" class="button">View Menu</a>
+    </section>
 
-    <p class="tag">WELCOME TO BISTRO NOIR</p>
+    <section id="menu" class="section">
+        <p class="tag">OUR MENU</p>
+        <h2>Discover Our Menu</h2>
 
-    <h1>Bistro Noir</h1>
+        <div class="menu-item">
+            <h3>Italian Pasta <span class="price">42 zł</span></h3>
+            <p>Fresh pasta with a delicious homemade sauce.</p>
+        </div>
 
-    <h2>Modern Restaurant in Wroclaw</h2>
+        <div class="menu-item">
+            <h3>Grilled Salmon <span class="price">68 zł</span></h3>
+            <p>Fresh salmon served with seasonal vegetables.</p>
+        </div>
 
-    <p>Discover our food and enjoy the atmosphere.</p>
+        <div class="menu-item">
+            <h3>Chocolate Dessert <span class="price">24 zł</span></h3>
+            <p>A sweet ending to your dinner.</p>
+        </div>
+    </section>
 
-    <button class="button">View Menu</button>
+    <section id="about" class="section">
+        <p class="tag">ABOUT US</p>
+        <h2>Our Story</h2>
+        <p class="text">
+            Bistro Noir is a modern restaurant in the heart of Wrocław.
+            We cook with fresh, seasonal ingredients and serve every dish
+            in a warm, relaxed atmosphere. Come for lunch, stay for dinner.
+        </p>
+    </section>
 
-</section>
+    <section id="contact" class="section">
+        <p class="tag">CONTACT</p>
+        <h2>Visit Us</h2>
+        <p>ul. Przykładowa 1, Wrocław</p>
+        <p>Mon-Sun: 12:00 - 22:00</p>
+        <p>+48 000 000 000</p>
 
-    <section id="menu" class="menu">
-    <p class="tag">OUR MENU</p>
-    <h2>Discover Our Menu</h2>
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps?q=Rynek+Wroclaw&output=embed"
+                width="100%" height="300" style="border:0;"
+                allowfullscreen="" loading="lazy"
+                title="Map of Bistro Noir">
+            </iframe>
+        </div>
+    </section>
 
-    <div class="menu-item">
-        <h3>Italian Pasta</h3>
-        <p>Fresh pasta with a delicious homemade sauce.</p>
-    </div>
+    <footer>
+        <p>© 2026 Bistro Noir. All rights reserved.</p>
+    </footer>
 
-    <div class="menu-item">
-        <h3>Grilled Salmon</h3>
-        <p>Fresh salmon served with seasonal vegetables.</p>
-    </div>
-
-    <div class="menu-item">
-        <h3>Chocolate Dessert</h3>
-        <p>A sweet ending to your dinner.</p>
-    </div>
-</section>
-  
 </body>
 </html>
