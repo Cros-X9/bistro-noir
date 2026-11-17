@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Chocolate dessert illustration">
+  <defs>
+    <radialGradient id="bg" cx="0.5" cy="0.4" r="0.8">
+      <stop offset="0" stop-color="#3a2530"/>
+      <stop offset="1" stop-color="#150d12"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <!-- plate -->
+  <ellipse cx="200" cy="248" rx="155" ry="30" fill="#000" opacity="0.35"/>
+  <ellipse cx="200" cy="215" rx="155" ry="52" fill="#f4f1ea"/>
+  <ellipse cx="200" cy="210" rx="118" ry="38" fill="#e8e3d8"/>
+  <!-- chocolate drizzle on plate -->
+  <path d="M95 215 Q125 195 150 215 T205 215 T260 215 T310 210" fill="none" stroke="#4a2a1a" stroke-width="5" stroke-linecap="round"/>
+  <!-- cake slice -->
+  <polygon points="140,150 175,122 285,122 250,150" fill="#7a4428"/>
+  <rect x="140" y="150" width="110" height="68" fill="#4a2a1a"/>
+  <polygon points="250,150 285,122 285,190 250,218" fill="#34190d"/>
+  <!-- cream layers -->
+  <rect x="140" y="170" width="110" height="7" fill="#f1e0c0"/>
+  <polygon points="250,170 285,142 285,149 250,177" fill="#d9c49a"/>
+  <rect x="140" y="193" width="110" height="7" fill="#f1e0c0"/>
+  <polygon points="250,193 285,165 285,172 250,200" fill="#d9c49a"/>
+  <!-- glaze on top -->
+  <path d="M148 150 Q165 138 185 130 L275 130 Q262 142 246 150 Z" fill="#2a130a"/>
+  <path d="M150 150 Q152 162 158 162 Q162 156 166 152 M190 150 Q192 160 197 160 Q200 154 203 150 M225 150 Q227 158 232 158 Q235 153 238 150" fill="#2a130a" stroke="#2a130a" stroke-width="2"/>
+  <!-- strawberry -->
+  <path d="M225 108 Q205 112 208 128 Q215 142 228 142 Q242 140 244 126 Q244 110 225 108 Z" fill="#d43a3a"/>
+  <g fill="#fbd1c0">
+    <circle cx="219" cy="122" r="1.5"/><circle cx="230" cy="120" r="1.5"/>
+    <circle cx="225" cy="131" r="1.5"/><circle cx="236" cy="130" r="1.5"/>
+  </g>
+  <path d="M215 110 Q225 100 235 110 Q225 106 215 110 Z" fill="#3f8f4a"/>
+  <!-- mint -->
+  <path d="M255 128 Q268 112 282 124 Q270 136 255 128 Z" fill="#4fa85a"/>
+  <path d="M262 126 Q272 118 280 124" stroke="#2f7a3a" stroke-width="1.5" fill="none"/>
+  <!-- powdered sugar dots -->
+  <g fill="#fff">
+    <circle cx="190" cy="128" r="1.5"/><circle cx="205" cy="125" r="1.5"/>
+    <circle cx="255" cy="132" r="1.5"/><circle cx="170" cy="134" r="1.5"/>
+  </g>
+</svg>
