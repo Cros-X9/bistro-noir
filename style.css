@@ -29,7 +29,7 @@ img {
     max-width: 100%;
 }
 
-/* Header / navigation */
+
 header {
     position: sticky;
     top: 0;
@@ -81,7 +81,7 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
-/* Hero */
+
 .hero {
     min-height: 85vh;
     display: flex;
@@ -101,14 +101,14 @@ nav a:hover {
     justify-content: center;
 }
 
-/* Small labels above headings */
+
 .tag {
     letter-spacing: 3px;
     font-size: 13px;
     color: #d6b47a;
 }
 
-/* Buttons */
+
 .button {
     display: inline-block;
     background-color: #d6b47a;
@@ -136,7 +136,7 @@ nav a:hover {
     color: #181818;
 }
 
-/* Sections */
+
 .section {
     padding: 80px 20px;
     text-align: center;
@@ -157,7 +157,7 @@ nav a:hover {
     line-height: 1.6;
 }
 
-/* Menu cards */
+
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -222,7 +222,7 @@ nav a:hover {
     white-space: nowrap;
 }
 
-/* Interior */
+
 .interior {
     max-width: 800px;
     margin: 40px auto 0;
@@ -261,7 +261,7 @@ nav a:hover {
     transform: scale(1.06);
 }
 
-/* About facts */
+
 .facts {
     display: flex;
     justify-content: center;
@@ -282,7 +282,7 @@ nav a:hover {
     letter-spacing: 1px;
 }
 
-/* Contact */
+
 .phone {
     color: #ffffff;
     text-decoration: none;
@@ -296,7 +296,7 @@ nav a:hover {
     overflow: hidden;
 }
 
-/* Footer */
+
 footer {
     padding: 30px 20px;
     border-top: 1px solid #333;
@@ -307,7 +307,7 @@ footer p {
     font-size: 14px;
 }
 
-/* Mobile */
+
 @media (max-width: 600px) {
     h1 {
         font-size: 38px;
@@ -333,4 +333,52 @@ footer p {
     .facts {
         gap: 30px;
     }
+}
+
+#intro {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background: #111;
+    color: #fff;
+    cursor: pointer;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+#intro.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+.intro-logo {
+    width: 140px;
+    height: auto;
+    opacity: 0;
+    transform: scale(0.6);
+    animation: introLogo 1s ease forwards;
+}
+.intro-name {
+    font-size: 2.2rem;
+    letter-spacing: 0.08em;
+    opacity: 0;
+    animation: introName 0.8s ease 0.6s forwards;
+}
+#intro.hide .intro-logo {
+    animation: introShrink 0.8s ease forwards;
+}
+body.intro-lock {
+    overflow: hidden;
+}
+@keyframes introLogo {
+    to { opacity: 1; transform: scale(1); }
+}
+@keyframes introName {
+    to { opacity: 1; }
+}
+@keyframes introShrink {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0; transform: scale(0.6); }
 }
