@@ -1,135 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bistro Noir - modern restaurant in Wrocław. Fresh pasta, grilled salmon and desserts.">
-    <title>Bistro Noir</title>
+    <meta name="description" content="Bistro Noir – nowoczesna restauracja we Wrocławiu. Świeży makaron, grillowany łosoś i desery.">
+    <title>Bistro Noir – restauracja we Wrocławiu</title>
     <link rel="icon" href="logo.svg" type="image/svg+xml">
+    <link rel="alternate" hreflang="pl" href="index.html">
+    <link rel="alternate" hreflang="en" href="en.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bistro Noir – restauracja we Wrocławiu">
+    <meta property="og:description" content="Świeży makaron, grillowany łosoś i desery. Zarezerwuj stolik!">
+    <meta property="og:locale" content="pl_PL">
+
     <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Bistro Noir",
+        "description": "Nowoczesna restauracja we Wrocławiu.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Przykładowa 1",
+            "addressLocality": "Wrocław",
+            "addressCountry": "PL"
+        },
+        "telephone": "+48000000000",
+        "servesCuisine": ["Włoska", "Rybna"],
+        "openingHours": "Mo-Su 12:00-22:00"
+    }
+    </script>
 </head>
 <body>
 
     <header>
         <nav>
             <a href="#" class="brand">
-                <img src="logo.svg" alt="Bistro Noir logo" class="logo-small">
+                <img src="logo.svg" alt="Logo Bistro Noir" class="logo-small">
                 <span>Bistro Noir</span>
             </a>
             <div class="links">
                 <a href="#menu">Menu</a>
-                <a href="#atmosphere">Atmosphere</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+                <a href="#atmosphere">Atmosfera</a>
+                <a href="#about">O nas</a>
+                <a href="#contact">Kontakt</a>
+                <a href="en.html" hreflang="en" lang="en">EN</a>
             </div>
         </nav>
     </header>
 
     <section class="hero">
-        <img src="logo.svg" alt="Bistro Noir logo" class="logo-big">
-        <p class="tag">WELCOME TO</p>
+        <img src="logo.svg" alt="Logo Bistro Noir" class="logo-big">
+        <p class="tag">WITAMY W</p>
         <h1>Bistro Noir</h1>
-        <h2>Modern Restaurant in Wrocław</h2>
-        <p>Discover our food and enjoy the atmosphere.</p>
+        <h2>Nowoczesna restauracja we Wrocławiu</h2>
+        <p>Spróbuj naszych dań i poczuj wyjątkową atmosferę.</p>
         <div class="hero-buttons">
-            <a href="#menu" class="button">View Menu</a>
-            <a href="#contact" class="button button-outline">Book a Table</a>
+            <a href="#menu" class="button">Zobacz menu</a>
+            <a href="#contact" class="button button-outline">Zarezerwuj stolik</a>
         </div>
     </section>
 
     <section id="menu" class="section">
-        <p class="tag">OUR MENU</p>
-        <h2>Discover Our Menu</h2>
+        <p class="tag">NASZE MENU</p>
+        <h2>Poznaj nasze menu</h2>
 
         <div class="cards">
             <div class="card">
                 <div class="card-img">
-                    <img src="pasta.svg" alt="Italian pasta" onerror="this.style.display='none'">
+                    <img src="pasta.svg" alt="Włoski makaron" onerror="this.style.display='none'">
                     <span class="emoji">🍝</span>
                 </div>
                 <div class="card-body">
-                    <h3>Italian Pasta <span class="price">42 zł</span></h3>
-                    <p>Fresh pasta with a delicious homemade sauce.</p>
+                    <h3>Włoski makaron <span class="price">42 zł</span></h3>
+                    <p>Świeży makaron z domowym sosem.</p>
                 </div>
             </div>
 
             <div class="card">
                 <div class="card-img">
-                    <img src="salmon.svg" alt="Grilled salmon" onerror="this.style.display='none'">
+                    <img src="salmon.svg" alt="Grillowany łosoś" onerror="this.style.display='none'">
                     <span class="emoji">🐟</span>
                 </div>
                 <div class="card-body">
-                    <h3>Grilled Salmon <span class="price">68 zł</span></h3>
-                    <p>Fresh salmon served with seasonal vegetables.</p>
+                    <h3>Grillowany łosoś <span class="price">68 zł</span></h3>
+                    <p>Świeży łosoś z warzywami sezonowymi.</p>
                 </div>
             </div>
 
             <div class="card">
                 <div class="card-img">
-                    <img src="dessert.svg" alt="Chocolate dessert" onerror="this.style.display='none'">
+                    <img src="dessert.svg" alt="Czekoladowy deser" onerror="this.style.display='none'">
                     <span class="emoji">🍫</span>
                 </div>
                 <div class="card-body">
-                    <h3>Chocolate Dessert <span class="price">24 zł</span></h3>
-                    <p>A sweet ending to your dinner.</p>
+                    <h3>Czekoladowy deser <span class="price">24 zł</span></h3>
+                    <p>Słodkie zakończenie kolacji.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="atmosphere" class="section dark">
-        <p class="tag">ATMOSPHERE</p>
-        <h2>Inside Bistro Noir</h2>
-        <p class="text">Warm light, comfortable chairs and cozy tables. A place to relax with friends and family.</p>
+        <p class="tag">ATMOSFERA</p>
+        <h2>Wnętrze Bistro Noir</h2>
+        <p class="text">Ciepłe światło, wygodne krzesła i przytulne stoliki. Miejsce, w którym odpoczniesz w gronie przyjaciół i rodziny.</p>
 
         <div class="interior">
-            <img src="interior.svg" alt="Restaurant interior with tables and chairs">
+            <img src="interior.svg" alt="Wnętrze restauracji ze stolikami i krzesłami">
         </div>
 
         <div class="gallery">
-            <div class="gallery-item"><img src="images/interior1.jpg" alt="Restaurant hall" onerror="this.parentElement.style.display='none'"></div>
-            <div class="gallery-item"><img src="images/interior2.jpg" alt="Restaurant bar" onerror="this.parentElement.style.display='none'"></div>
-            <div class="gallery-item"><img src="images/interior3.jpg" alt="Restaurant table" onerror="this.parentElement.style.display='none'"></div>
+            <div class="gallery-item"><img src="images/interior1.jpg" alt="Sala restauracji" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+            <div class="gallery-item"><img src="images/interior2.jpg" alt="Bar w restauracji" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+            <div class="gallery-item"><img src="images/interior3.jpg" alt="Stolik w restauracji" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
         </div>
     </section>
 
     <section id="about" class="section">
-        <p class="tag">ABOUT US</p>
-        <h2>Our Story</h2>
+        <p class="tag">O NAS</p>
+        <h2>Nasza historia</h2>
         <p class="text">
-            Bistro Noir is a modern restaurant in the heart of Wrocław.
-            We cook with fresh, seasonal ingredients and serve every dish
-            in a warm, relaxed atmosphere. Come for lunch, stay for dinner.
+            Bistro Noir to nowoczesna restauracja w sercu Wrocławia.
+            Gotujemy ze świeżych, sezonowych składników i podajemy każde danie
+            w ciepłej, spokojnej atmosferze. Wpadnij na lunch, zostań na kolację.
         </p>
 
         <div class="facts">
-            <div class="fact"><strong>12+</strong><span>Dishes</span></div>
-            <div class="fact"><strong>40</strong><span>Seats</span></div>
-            <div class="fact"><strong>7/7</strong><span>Days open</span></div>
+            <div class="fact"><strong>12+</strong><span>Dań</span></div>
+            <div class="fact"><strong>40</strong><span>Miejsc</span></div>
+            <div class="fact"><strong>7/7</strong><span>Dni w tygodniu</span></div>
         </div>
     </section>
 
     <section id="contact" class="section dark">
-        <p class="tag">CONTACT</p>
-        <h2>Visit Us</h2>
+        <p class="tag">KONTAKT</p>
+        <h2>Odwiedź nas</h2>
         <p>ul. Przykładowa 1, Wrocław</p>
-        <p>Mon-Sun: 12:00 - 22:00</p>
+        <p>Pn–Nd: 12:00–22:00</p>
         <p><a href="tel:+48000000000" class="phone">+48 000 000 000</a></p>
-        <a href="tel:+48000000000" class="button">Call to Book</a>
+        <a href="tel:+48000000000" class="button">Zadzwoń i zarezerwuj</a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Rynek+Wroclaw" class="button button-outline" target="_blank" rel="noopener">Wyznacz trasę</a>
 
         <div class="map">
             <iframe
                 src="https://www.google.com/maps?q=Rynek+Wroclaw&output=embed"
                 width="100%" height="300" style="border:0;"
                 allowfullscreen="" loading="lazy"
-                title="Map of Bistro Noir">
+                title="Mapa dojazdu do Bistro Noir">
             </iframe>
         </div>
     </section>
 
     <footer>
-        <img src="logo.svg" alt="Bistro Noir logo" class="logo-small">
-        <p>© 2026 Bistro Noir. All rights reserved.</p>
+        <img src="logo.svg" alt="Logo Bistro Noir" class="logo-small">
+        <p>© 2026 Bistro Noir. Wszelkie prawa zastrzeżone.</p>
     </footer>
 
 </body>
