@@ -36,6 +36,31 @@
 </head>
 <body>
 
+    <div id="intro" aria-hidden="true">
+        <img src="logo.svg" alt="" class="intro-logo">
+        <span class="intro-name">Bistro Noir</span>
+    </div>
+    <script>
+    (function () {
+        var intro = document.getElementById('intro');
+        if (!intro) return;
+        var seen = false;
+        try { seen = sessionStorage.getItem('introSeen'); } catch (e) {}
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (seen || reduce) { intro.remove(); return; }
+
+        document.body.classList.add('intro-lock');
+        function finish() {
+            intro.classList.add('hide');
+            document.body.classList.remove('intro-lock');
+            try { sessionStorage.setItem('introSeen', '1'); } catch (e) {}
+            setTimeout(function () { intro.remove(); }, 900);
+        }
+        setTimeout(finish, 2200);
+        intro.addEventListener('click', finish);
+    })();
+    </script>
+
     <header>
         <nav>
             <a href="#" class="brand">
