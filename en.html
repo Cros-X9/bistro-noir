@@ -36,30 +36,60 @@
 </head>
 <body>
 
-    <div id="intro" aria-hidden="true">
-        <img src="logo.svg" alt="" class="intro-logo">
-        <span class="intro-name">Bistro Noir</span>
-    </div>
-    <script>
-    (function () {
-        var intro = document.getElementById('intro');
-        if (!intro) return;
-        var seen = false;
-        try { seen = sessionStorage.getItem('introSeen'); } catch (e) {}
-        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (seen || reduce) { intro.remove(); return; }
+    <style>
+#intro {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background: #111;
+    color: #fff;
+    cursor: pointer;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+    animation: introAuto 0.5s ease 4s forwards;
+}
+#intro.hide { opacity: 0; visibility: hidden; }
+#intro .intro-logo {
+    width: 140px;
+    height: auto;
+    opacity: 0;
+    transform: scale(0.6);
+    animation: introLogo 1s ease forwards;
+}
+#intro .intro-name {
+    font-size: 2.2rem;
+    letter-spacing: 0.08em;
+    opacity: 0;
+    animation: introName 0.8s ease 0.6s forwards;
+}
+body.intro-lock { overflow: hidden; }
+@keyframes introLogo { to { opacity: 1; transform: scale(1); } }
+@keyframes introName { to { opacity: 1; } }
+@keyframes introAuto { to { opacity: 0; visibility: hidden; } }
+</style>
 
-        document.body.classList.add('intro-lock');
-        function finish() {
-            intro.classList.add('hide');
-            document.body.classList.remove('intro-lock');
-            try { sessionStorage.setItem('introSeen', '1'); } catch (e) {}
-            setTimeout(function () { intro.remove(); }, 900);
-        }
-        setTimeout(finish, 2200);
-        intro.addEventListener('click', finish);
-    })();
-    </script>
+<div id="intro">
+    <img src="logo.svg" alt="" class="intro-logo">
+    <span class="intro-name">Bistro Noir</span>
+</div>
+
+<script>
+(function () {
+    var intro = document.getElementById('intro');
+    document.body.classList.add('intro-lock');
+    function finish() {
+        intro.classList.add('hide');
+        document.body.classList.remove('intro-lock');
+        setTimeout(function () { intro.style.display = 'none'; }, 900);
+    }
+    setTimeout(finish, 2200);
+    intro.addEventListener('click', finish);
+})();
+</script>
 
     <header>
         <nav>
