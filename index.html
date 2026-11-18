@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bistro Noir – nowoczesna restauracja we Wrocławiu. Świeży makaron, grillowany łosoś i desery.">
-    <title>Bistro Noir – restauracja we Wrocławiu</title>
+    <title>Bistro Noir – restauracja we Wrocławiu (v3)</title>
     <link rel="icon" href="logo.svg" type="image/svg+xml">
     <link rel="alternate" hreflang="pl" href="index.html">
     <link rel="alternate" hreflang="en" href="en.html">
@@ -14,7 +14,7 @@
     <meta property="og:description" content="Świeży makaron, grillowany łosoś i desery. Zarezerwuj stolik!">
     <meta property="og:locale" content="pl_PL">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3">
 
     <script type="application/ld+json">
     {
@@ -33,63 +33,50 @@
         "openingHours": "Mo-Su 12:00-22:00"
     }
     </script>
-</head>
-<body>
 
     <style>
-#intro {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    z-index: 99999;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    background: #111;
-    color: #fff;
-    cursor: pointer;
-    transition: opacity 0.8s ease, visibility 0.8s ease;
-    animation: introAuto 0.5s ease 4s forwards;
-}
-#intro.hide { opacity: 0; visibility: hidden; }
-#intro .intro-logo {
-    width: 140px;
-    height: auto;
-    opacity: 0;
-    transform: scale(0.6);
-    animation: introLogo 1s ease forwards;
-}
-#intro .intro-name {
-    font-size: 2.2rem;
-    letter-spacing: 0.08em;
-    opacity: 0;
-    animation: introName 0.8s ease 0.6s forwards;
-}
-body.intro-lock { overflow: hidden; }
-@keyframes introLogo { to { opacity: 1; transform: scale(1); } }
-@keyframes introName { to { opacity: 1; } }
-@keyframes introAuto { to { opacity: 0; visibility: hidden; } }
-</style>
+        #intro {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            background: #111;
+            color: #fff;
+            cursor: pointer;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+            animation: introAuto 0.5s ease 4s forwards;
+        }
+        #intro.hide { opacity: 0; visibility: hidden; }
+        #intro .intro-logo {
+            width: 140px;
+            height: auto;
+            opacity: 0;
+            transform: scale(0.6);
+            animation: introLogo 1s ease forwards;
+        }
+        #intro .intro-name {
+            font-size: 2.2rem;
+            letter-spacing: 0.08em;
+            color: #fff;
+            opacity: 0;
+            animation: introName 0.8s ease 0.6s forwards;
+        }
+        body.intro-lock { overflow: hidden; }
+        @keyframes introLogo { to { opacity: 1; transform: scale(1); } }
+        @keyframes introName { to { opacity: 1; } }
+        @keyframes introAuto { to { opacity: 0; visibility: hidden; } }
+    </style>
+</head>
+<body class="intro-lock">
 
-<div id="intro">
-    <img src="logo.svg" alt="" class="intro-logo">
-    <span class="intro-name">Bistro Noir</span>
-</div>
-
-<script>
-(function () {
-    var intro = document.getElementById('intro');
-    document.body.classList.add('intro-lock');
-    function finish() {
-        intro.classList.add('hide');
-        document.body.classList.remove('intro-lock');
-        setTimeout(function () { intro.style.display = 'none'; }, 900);
-    }
-    setTimeout(finish, 2200);
-    intro.addEventListener('click', finish);
-})();
-</script>
+    <div id="intro">
+        <img src="logo.svg" alt="" class="intro-logo">
+        <span class="intro-name">Bistro Noir</span>
+    </div>
 
     <header>
         <nav>
@@ -214,6 +201,20 @@ body.intro-lock { overflow: hidden; }
         <img src="logo.svg" alt="Logo Bistro Noir" class="logo-small">
         <p>© 2026 Bistro Noir. Wszelkie prawa zastrzeżone.</p>
     </footer>
+
+    <script>
+    (function () {
+        var intro = document.getElementById('intro');
+        if (!intro) return;
+        function finish() {
+            intro.classList.add('hide');
+            document.body.classList.remove('intro-lock');
+            setTimeout(function () { intro.style.display = 'none'; }, 900);
+        }
+        setTimeout(finish, 2200);
+        intro.addEventListener('click', finish);
+    })();
+    </script>
 
 </body>
 </html>
