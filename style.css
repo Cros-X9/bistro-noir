@@ -9,7 +9,7 @@
     --accent: #c9a24b;
 }
 
-
+/* ===== База ===== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -42,7 +42,7 @@ h1, h2, h3 {
     font-weight: 600;
 }
 
-
+/* ===== Шапка ===== */
 header {
     position: sticky;
     top: 0;
@@ -254,7 +254,7 @@ nav {
     overflow: hidden;
 }
 
-/* эмодзи лежит под картинкой и видна только если картинка не загрузилась */
+/* эмодзи лежит под картинкой и видно только если картинка не загрузилась */
 .card-img .emoji {
     position: absolute;
     font-size: 4rem;
@@ -408,16 +408,5 @@ footer .logo-small {
     .logo-big {
         width: 90px;
         height: 90px;
-    }
-}
-
-/* ===== Уважение к настройке «уменьшить движение» ===== */
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-
-    * {
-        transition: none !important;
     }
 }
